@@ -87,7 +87,7 @@ export default function StudentPaymentPage() {
 
       await addDoc(collection(db, "payments_pending"), paymentDoc);
 
-      alert("Payment submitted. Admin will approve.");
+      alert("Payment submitted! Admin will approve shortly.");
       router.push("/student/login");
     } catch (err) {
       console.error(err);
@@ -108,6 +108,7 @@ export default function StudentPaymentPage() {
         alignItems: "flex-start",
         padding: 24,
         gap: 24,
+        flexWrap: "wrap", // IMPORTANT FIX
       }}
     >
       {/* LEFT SIDE — FORM */}
@@ -122,7 +123,9 @@ export default function StudentPaymentPage() {
           boxShadow: "0 0 25px rgba(11,99,208,0.3)",
         }}
       >
-        <h2 style={{ textAlign: "center", color: "#66b3ff" }}>💳 Student Payment</h2>
+        <h2 style={{ textAlign: "center", color: "#66b3ff" }}>
+          💳 Student Payment
+        </h2>
 
         <div style={{ display: "grid", gap: 12, marginTop: 20 }}>
           <input style={input} placeholder="Full Name" name="name" value={form.name} onChange={handleChange} required />
@@ -149,18 +152,15 @@ export default function StudentPaymentPage() {
             Join Demo Class (₹89)
           </label>
 
-          {/* Amount */}
           <div style={{ background: "rgba(0,0,0,0.35)", padding: 12, borderRadius: 10 }}>
             <h3 style={{ margin: 0 }}>Amount: ₹{computeAmount()}</h3>
           </div>
 
-          {/* QR */}
           <div style={{ textAlign: "center" }}>
             <img src="/upi-qr.png" style={{ width: 180, borderRadius: 10 }} />
             <p style={{ marginTop: 8, color: "#aaa" }}>Scan & Pay</p>
           </div>
 
-          {/* BIG UPLOAD BOX */}
           <label
             style={{
               border: "2px dashed #0b63d0",
@@ -193,7 +193,8 @@ export default function StudentPaymentPage() {
           background: "rgba(255,255,255,0.04)",
           padding: 24,
           borderRadius: 14,
-          width: 350,
+          width: "350px",
+          maxWidth: "100%", // FIX FOR MOBILE
           height: "fit-content",
           boxShadow: "0 0 25px rgba(0,0,0,0.3)",
         }}
@@ -208,8 +209,8 @@ export default function StudentPaymentPage() {
           <li>Your payment will be sent to the admin.</li>
           <li>Admin will approve your payment shortly.</li>
           <li>After approval, your course access gets activated.</li>
-          <li>After Submiting Wait for 5 min and login through your mail .</li>
-          <li>If you face any issue, you can call us anytime +917349 124762..</li>
+          <li>After submitting, wait 5 mins and login with your email.</li>
+          <li>If you face any issue, call +91 7349124762 anytime.</li>
         </ul>
       </div>
     </div>
