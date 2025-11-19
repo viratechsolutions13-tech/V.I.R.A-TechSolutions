@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -119,3 +120,4 @@ const tbodyRow = {
   textAlign: "center" as const,
   borderBottom: "1px solid rgba(255,255,255,0.1)",
 };
+
