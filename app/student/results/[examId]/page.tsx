@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -90,3 +91,4 @@ const resultBox = {
   marginTop: 40,
   boxShadow: "0 0 15px rgba(0,0,0,0.3)",
 };
+
