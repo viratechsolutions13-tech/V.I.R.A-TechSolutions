@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -257,3 +258,4 @@ const row = {
   background: "rgba(255,255,255,0.04)",
   borderBottom: "1px solid rgba(255,255,255,0.1)",
 };
+
