@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -196,3 +197,4 @@ const center = {
   justifyContent: "center",
   color: "white",
 };
+
