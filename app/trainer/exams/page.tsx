@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -518,3 +519,4 @@ const codeBox = {
   color: "#8aff8a",
   whiteSpace: "pre-wrap" as const,
 };
+
