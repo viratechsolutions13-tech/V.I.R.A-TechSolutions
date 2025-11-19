@@ -76,18 +76,10 @@ export default function Navbar() {
           className="desktop-menu"
         >
           <div className="nav-links" style={{ display: "flex", gap: "25px" }}>
-            <Link href="/" style={linkStyle} onClick={closeMenu}>
-              Home
-            </Link>
-            <Link href="/about" style={linkStyle} onClick={closeMenu}>
-              About
-            </Link>
-            <Link href="/courses" style={linkStyle} onClick={closeMenu}>
-              Courses
-            </Link>
-            <Link href="/careers" style={linkStyle} onClick={closeMenu}>
-              Careers
-            </Link>
+            <Link href="/" style={linkStyle} onClick={closeMenu}>Home</Link>
+            <Link href="/about" style={linkStyle} onClick={closeMenu}>About</Link>
+            <Link href="/courses" style={linkStyle} onClick={closeMenu}>Courses</Link>
+            <Link href="/careers" style={linkStyle} onClick={closeMenu}>Careers</Link>
           </div>
 
           <Link href="/login" style={lmsButton} onClick={closeMenu}>
@@ -95,17 +87,16 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* 📱 Hamburger Icon */}
+        {/* 📱 Hamburger Icon — FIXED */}
         <div
           onClick={toggleMenu}
+          className="mobile-menu-icon"
           style={{
-            display: "none",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             cursor: "pointer",
           }}
-          className="mobile-menu-icon"
         >
           <div style={bar}></div>
           <div style={bar}></div>
@@ -145,28 +136,18 @@ export default function Navbar() {
             ✕
           </button>
 
-          <Link href="/" style={mobileLink} onClick={closeMenu}>
-            Home
-          </Link>
-          <Link href="/about" style={mobileLink} onClick={closeMenu}>
-            About
-          </Link>
-          <Link href="/courses" style={mobileLink} onClick={closeMenu}>
-            Courses
-          </Link>
-          <Link href="/careers" style={mobileLink} onClick={closeMenu}>
-            Careers
-          </Link>
-          <Link href="/login" style={mobileLmsButton} onClick={closeMenu}>
-            🎓 LMS Portal
-          </Link>
+          <Link href="/" style={mobileLink} onClick={closeMenu}>Home</Link>
+          <Link href="/about" style={mobileLink} onClick={closeMenu}>About</Link>
+          <Link href="/courses" style={mobileLink} onClick={closeMenu}>Courses</Link>
+          <Link href="/careers" style={mobileLink} onClick={closeMenu}>Careers</Link>
+          <Link href="/login" style={mobileLmsButton} onClick={closeMenu}>🎓 LMS Portal</Link>
         </div>
       )}
     </nav>
   );
 }
 
-// 🔗 Styles
+/* 🔗 Styles */
 const linkStyle: React.CSSProperties = {
   color: "white",
   textDecoration: "none",
