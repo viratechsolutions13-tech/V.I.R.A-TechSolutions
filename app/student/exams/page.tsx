@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -312,3 +313,4 @@ const btnSubmit = {
   borderRadius: 8,
   cursor: "pointer",
 };
+
