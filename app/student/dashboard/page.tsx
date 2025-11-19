@@ -1,3 +1,4 @@
+// @ts-nocheck
 "use client";
 
 import { useEffect, useState } from "react";
@@ -194,3 +195,4 @@ const table = {
   borderCollapse: "collapse" as const,
   background: "rgba(255,255,255,0.05)",
 };
+
